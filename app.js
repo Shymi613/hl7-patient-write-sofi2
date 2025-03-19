@@ -47,7 +47,7 @@ document.getElementById('patientForm').addEventListener('submit', function(event
     };
 
     // Enviar los datos usando Fetch API
-    fetch('https://hl7-fhir-ehr-sofi.onrender.com', {
+    fetch('https://hl7-fhir-ehr-sofi.onrender.com/pacientes', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
