@@ -14,9 +14,9 @@ document.getElementById('patientForm').addEventListener('submit', function(event
     const city = document.getElementById('city').value;
     const postalCode = document.getElementById('postalCode').value;
 
-    // Crear el objeto pacientes en formato FHIR
-    const pacientes = {
-        resourceType: "pacientes",
+    // Crear el objeto Patient en formato FHIR
+    const patient = {
+        resourceType: "Patient",
         name: [{
             use: "official",
             given: [name],
@@ -47,12 +47,12 @@ document.getElementById('patientForm').addEventListener('submit', function(event
     };
 
     // Enviar los datos usando Fetch API
-    fetch('https://hl7-fhir-ehr-sofi.onrender.com/pacientes', {
+    fetch('https://hl7-fhir-ehr-sofi.onrender.com/patient', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(pacientes)
+        body: JSON.stringify(patient)
     })
     .then(response => response.json())
     .then(data => {
