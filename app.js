@@ -1,4 +1,4 @@
-document.getElementById('pacientesForm').addEventListener('submit', function(event) {
+document.getElementById('patientForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
     // Obtener los valores del formulario
