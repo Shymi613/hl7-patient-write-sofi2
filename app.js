@@ -15,7 +15,7 @@ document.getElementById('pacientesForm').addEventListener('submit', function(eve
     const postalCode = document.getElementById('postalCode').value;
 
     // Crear el objeto pacientes en formato FHIR
-    const patient = {
+    const pacientes = {
         resourceType: "pacientes",
         name: [{
             use: "official",
