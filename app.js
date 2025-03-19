@@ -1,4 +1,4 @@
-document.getElementById('patientForm').addEventListener('submit', function(event) {
+document.getElementById('pacientesForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
     // Obtener los valores del formulario
@@ -14,9 +14,9 @@ document.getElementById('patientForm').addEventListener('submit', function(event
     const city = document.getElementById('city').value;
     const postalCode = document.getElementById('postalCode').value;
 
-    // Crear el objeto Patient en formato FHIR
+    // Crear el objeto pacientes en formato FHIR
     const patient = {
-        resourceType: "Patient",
+        resourceType: "pacientes",
         name: [{
             use: "official",
             given: [name],
